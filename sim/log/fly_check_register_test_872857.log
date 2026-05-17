@@ -1,0 +1,78 @@
+# vsim -sv_seed 872857 -coverage -coveranalysis -debugDB -l fly_check_register_test_872857.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit fly_check_register_test.ucdb; log -r /*;run -all;" "+fly_check_register_test" 
+# Start time: 19:29:51 on Mar 27,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.timer_register(fast)
+# Loading work.timer_clock_divisor(fast)
+# Loading work.timer_counter(fast)
+# Loading work.timer_interrupt(fast)
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit fly_check_register_test.ucdb
+#  log -r /*
+# run -all
+# 0: [testbench] Run fly_check_register_test
+# 0 [monitor] Start monitor transaction
+# 100000: [stimulus] Send packet to driver
+# 100000: [driver] Get packet from the stimulus
+# 130001 [monitor] Captured APB transaction
+# 130001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = aa
+# 150000: [stimulus] Send packet to driver
+# 150000: [driver] Get packet from the stimulus
+# 190001 [monitor] Captured APB transaction
+# 190001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = bb
+# 210000: [stimulus] Send packet to driver
+# 210000: [driver] Get packet from the stimulus
+# 250001 [monitor] Captured APB transaction
+# 250001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = cc
+# 270000: [stimulus] Send packet to driver
+# 270000: [driver] Get packet from the stimulus
+# 310001 [monitor] Captured APB transaction
+# 310001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = dd
+# 330200: [stimulus] Send packet to driver
+# 330200: [driver] Get packet from the stimulus
+# 370001 [monitor] Captured APB transaction
+# 370001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 00
+# 390000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h00
+# 390000: [stimulus] Send packet to driver
+# 390000: [driver] Get packet from the stimulus
+# 430001 [monitor] Captured APB transaction
+# 430001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 450000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# 450000: [stimulus] Send packet to driver
+# 450000: [driver] Get packet from the stimulus
+# 490001 [monitor] Captured APB transaction
+# 490001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = 00
+# 510000: [scoreboard] Data comparision at addr 8'h02 is matching 8'h00
+# 510000: [stimulus] Send packet to driver
+# 510000: [driver] Get packet from the stimulus
+# 550001 [monitor] Captured APB transaction
+# 550001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 00
+# 570000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h00
+# 570100: [scoreboard] TEST PASSED
+# 3570100: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(53)
+#    Time: 3570100 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 19:29:53 on Mar 27,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

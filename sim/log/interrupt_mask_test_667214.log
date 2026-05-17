@@ -1,0 +1,68 @@
+# vsim -sv_seed 667214 -coverage -coveranalysis -debugDB -l interrupt_mask_test_667214.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit interrupt_mask_test.ucdb; log -r /*;run -all;" "+interrupt_mask_test" 
+# Start time: 19:30:30 on Mar 27,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.timer_register(fast)
+# Loading work.timer_clock_divisor(fast)
+# Loading work.timer_counter(fast)
+# Loading work.timer_interrupt(fast)
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit interrupt_mask_test.ucdb
+#  log -r /*
+# run -all
+# 0: [testbench] Run interrupt_mask_test
+# 0 [monitor] Start monitor transaction
+# 100000: ==================================Overflow Interrupt Mask==========================
+# 100000: [stimulus] Send packet to driver
+# 100000: [driver] Get packet from the stimulus
+# 130001 [monitor] Captured APB transaction
+# 130001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 01
+# 1450000: [stimulus] Send packet to driver
+# 1450000: [driver] Get packet from the stimulus
+# 1490001 [monitor] Captured APB transaction
+# 1490001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 01
+# 1510000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h01
+# 1510000: PASS Overflow Interrupt is not trigger when reach max value
+# 1510100: ==================================Underflow Interrupt Mask==========================
+# 1510100: [stimulus] Send packet to driver
+# 1510100: [driver] Get packet from the stimulus
+# 1550001 [monitor] Captured APB transaction
+# 1550001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 02
+# 1570000: [stimulus] Send packet to driver
+# 1570000: [driver] Get packet from the stimulus
+# 1610001 [monitor] Captured APB transaction
+# 1610001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 03
+# 2930000: [stimulus] Send packet to driver
+# 2930000: [driver] Get packet from the stimulus
+# 2970001 [monitor] Captured APB transaction
+# 2970001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 02
+# 2990000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h02
+# 2990000: PASS Underflow Interrupt is not trigger when reach max value
+# 2990100: [scoreboard] TEST PASSED
+# 5990100: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(53)
+#    Time: 5990100 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 19:30:32 on Mar 27,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

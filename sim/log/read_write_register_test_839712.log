@@ -1,0 +1,230 @@
+# vsim -sv_seed 839712 -coverage -coveranalysis -debugDB -l read_write_register_test_839712.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit read_write_register_test.ucdb; log -r /*;run -all;" "+read_write_register_test" 
+# Start time: 19:29:47 on Mar 27,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.timer_register(fast)
+# Loading work.timer_clock_divisor(fast)
+# Loading work.timer_counter(fast)
+# Loading work.timer_interrupt(fast)
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit read_write_register_test.ucdb
+#  log -r /*
+# run -all
+# 0: [testbench] Run read_write_register_test
+# 0 [monitor] Start monitor transaction
+# ====================TCR value================
+# 100000: [stimulus] Send packet to driver
+# 100000: [driver] Get packet from the stimulus
+# 130001 [monitor] Captured APB transaction
+# 130001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 00
+# 150000: [stimulus] Send packet to driver
+# 150000: [driver] Get packet from the stimulus
+# 190001 [monitor] Captured APB transaction
+# 190001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 00
+# 210000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h00
+# 210000: [stimulus] Send packet to driver
+# 210000: [driver] Get packet from the stimulus
+# 250001 [monitor] Captured APB transaction
+# 250001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 55
+# 270000: [stimulus] Send packet to driver
+# 270000: [driver] Get packet from the stimulus
+# 310001 [monitor] Captured APB transaction
+# 310001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 15
+# 330000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h15
+# 330000: [stimulus] Send packet to driver
+# 330000: [driver] Get packet from the stimulus
+# 370001 [monitor] Captured APB transaction
+# 370001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = aa
+# 390000: [stimulus] Send packet to driver
+# 390000: [driver] Get packet from the stimulus
+# 430001 [monitor] Captured APB transaction
+# 430001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 0a
+# 450000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h0a
+# 450000: [stimulus] Send packet to driver
+# 450000: [driver] Get packet from the stimulus
+# 490001 [monitor] Captured APB transaction
+# 490001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 37
+# 510000: [stimulus] Send packet to driver
+# 510000: [driver] Get packet from the stimulus
+# 550001 [monitor] Captured APB transaction
+# 550001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 17
+# 570000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h17
+# 570000: [stimulus] Send packet to driver
+# 570000: [driver] Get packet from the stimulus
+# 610001 [monitor] Captured APB transaction
+# 610001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = ff
+# 630000: [stimulus] Send packet to driver
+# 630000: [driver] Get packet from the stimulus
+# 670001 [monitor] Captured APB transaction
+# 670001: [scoreboard] Get packet from monitor: READ: addr = 8'h00, data = 1f
+# 690000: [scoreboard] Data comparision at addr 8'h00 is matching 8'h1f
+# 690000: [stimulus] Send packet to driver
+# 690000: [driver] Get packet from the stimulus
+# 730001 [monitor] Captured APB transaction
+# 730001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h00, data = 00
+# ====================TSR value================
+# 750000: [stimulus] Send packet to driver
+# 750000: [driver] Get packet from the stimulus
+# 790001 [monitor] Captured APB transaction
+# 790001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = 02
+# 810000: [stimulus] Send packet to driver
+# 810000: [driver] Get packet from the stimulus
+# 850001 [monitor] Captured APB transaction
+# 850001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 870000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# 870000: [stimulus] Send packet to driver
+# 870000: [driver] Get packet from the stimulus
+# 910001 [monitor] Captured APB transaction
+# 910001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = 55
+# 930000: [stimulus] Send packet to driver
+# 930000: [driver] Get packet from the stimulus
+# 970001 [monitor] Captured APB transaction
+# 970001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 990000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# 990000: [stimulus] Send packet to driver
+# 990000: [driver] Get packet from the stimulus
+# 1030001 [monitor] Captured APB transaction
+# 1030001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = aa
+# 1050000: [stimulus] Send packet to driver
+# 1050000: [driver] Get packet from the stimulus
+# 1090001 [monitor] Captured APB transaction
+# 1090001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 1110000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# 1110000: [stimulus] Send packet to driver
+# 1110000: [driver] Get packet from the stimulus
+# 1150001 [monitor] Captured APB transaction
+# 1150001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = 37
+# 1170000: [stimulus] Send packet to driver
+# 1170000: [driver] Get packet from the stimulus
+# 1210001 [monitor] Captured APB transaction
+# 1210001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 1230000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# 1230000: [stimulus] Send packet to driver
+# 1230000: [driver] Get packet from the stimulus
+# 1270001 [monitor] Captured APB transaction
+# 1270001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h01, data = ff
+# 1290000: [stimulus] Send packet to driver
+# 1290000: [driver] Get packet from the stimulus
+# 1330001 [monitor] Captured APB transaction
+# 1330001: [scoreboard] Get packet from monitor: READ: addr = 8'h01, data = 00
+# 1350000: [scoreboard] Data comparision at addr 8'h01 is matching 8'h00
+# ====================TDR value================
+# 1350000: [stimulus] Send packet to driver
+# 1350000: [driver] Get packet from the stimulus
+# 1390001 [monitor] Captured APB transaction
+# 1390001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = 00
+# 1410000: [stimulus] Send packet to driver
+# 1410000: [driver] Get packet from the stimulus
+# 1450001 [monitor] Captured APB transaction
+# 1450001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = 00
+# 1470000: [scoreboard] Data comparision at addr 8'h02 is matching 8'h00
+# 1470000: [stimulus] Send packet to driver
+# 1470000: [driver] Get packet from the stimulus
+# 1510001 [monitor] Captured APB transaction
+# 1510001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = 55
+# 1530000: [stimulus] Send packet to driver
+# 1530000: [driver] Get packet from the stimulus
+# 1570001 [monitor] Captured APB transaction
+# 1570001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = 55
+# 1590000: [scoreboard] Data comparision at addr 8'h02 is matching 8'h55
+# 1590000: [stimulus] Send packet to driver
+# 1590000: [driver] Get packet from the stimulus
+# 1630001 [monitor] Captured APB transaction
+# 1630001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = aa
+# 1650000: [stimulus] Send packet to driver
+# 1650000: [driver] Get packet from the stimulus
+# 1690001 [monitor] Captured APB transaction
+# 1690001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = aa
+# 1710000: [scoreboard] Data comparision at addr 8'h02 is matching 8'haa
+# 1710000: [stimulus] Send packet to driver
+# 1710000: [driver] Get packet from the stimulus
+# 1750001 [monitor] Captured APB transaction
+# 1750001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = 37
+# 1770000: [stimulus] Send packet to driver
+# 1770000: [driver] Get packet from the stimulus
+# 1810001 [monitor] Captured APB transaction
+# 1810001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = 37
+# 1830000: [scoreboard] Data comparision at addr 8'h02 is matching 8'h37
+# 1830000: [stimulus] Send packet to driver
+# 1830000: [driver] Get packet from the stimulus
+# 1870001 [monitor] Captured APB transaction
+# 1870001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h02, data = ff
+# 1890000: [stimulus] Send packet to driver
+# 1890000: [driver] Get packet from the stimulus
+# 1930001 [monitor] Captured APB transaction
+# 1930001: [scoreboard] Get packet from monitor: READ: addr = 8'h02, data = ff
+# 1950000: [scoreboard] Data comparision at addr 8'h02 is matching 8'hff
+# ====================TIER value================
+# 1950000: [stimulus] Send packet to driver
+# 1950000: [driver] Get packet from the stimulus
+# 1990001 [monitor] Captured APB transaction
+# 1990001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = 00
+# 2010000: [stimulus] Send packet to driver
+# 2010000: [driver] Get packet from the stimulus
+# 2050001 [monitor] Captured APB transaction
+# 2050001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 00
+# 2070000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h00
+# 2070000: [stimulus] Send packet to driver
+# 2070000: [driver] Get packet from the stimulus
+# 2110001 [monitor] Captured APB transaction
+# 2110001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = 55
+# 2130000: [stimulus] Send packet to driver
+# 2130000: [driver] Get packet from the stimulus
+# 2170001 [monitor] Captured APB transaction
+# 2170001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 01
+# 2190000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h01
+# 2190000: [stimulus] Send packet to driver
+# 2190000: [driver] Get packet from the stimulus
+# 2230001 [monitor] Captured APB transaction
+# 2230001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = aa
+# 2250000: [stimulus] Send packet to driver
+# 2250000: [driver] Get packet from the stimulus
+# 2290001 [monitor] Captured APB transaction
+# 2290001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 02
+# 2310000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h02
+# 2310000: [stimulus] Send packet to driver
+# 2310000: [driver] Get packet from the stimulus
+# 2350001 [monitor] Captured APB transaction
+# 2350001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = 37
+# 2370000: [stimulus] Send packet to driver
+# 2370000: [driver] Get packet from the stimulus
+# 2410001 [monitor] Captured APB transaction
+# 2410001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 03
+# 2430000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h03
+# 2430000: [stimulus] Send packet to driver
+# 2430000: [driver] Get packet from the stimulus
+# 2470001 [monitor] Captured APB transaction
+# 2470001: [scoreboard] Get packet from monitor: WRITE: addr = 8'h03, data = ff
+# 2490000: [stimulus] Send packet to driver
+# 2490000: [driver] Get packet from the stimulus
+# 2530001 [monitor] Captured APB transaction
+# 2530001: [scoreboard] Get packet from monitor: READ: addr = 8'h03, data = 03
+# 2550000: [scoreboard] Data comparision at addr 8'h03 is matching 8'h03
+# 2550100: [scoreboard] TEST PASSED
+# 5550100: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(53)
+#    Time: 5550100 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 19:29:49 on Mar 27,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

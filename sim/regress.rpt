@@ -1,0 +1,24 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 13
+Passed            : 13
+Failed            : 0
+Unknown           : 0
+Used time         : 56s
+-----------------------------------------------------------
+Run log detail:
+log/default_divide_test_586659.log: => Passed
+log/default_value_register_test_477258.log: => Passed
+log/divide_by_eight_test_508121.log: => Passed
+log/divide_by_four_test_687949.log: => Passed
+log/divide_by_two_test_183905.log: => Passed
+log/fly_check_register_test_872857.log: => Passed
+log/interrupt_clear_test_565735.log: => Passed
+log/interrupt_mask_test_667214.log: => Passed
+log/interrupt_overall_test_582742.log: => Passed
+log/load_test_781497.log: => Passed
+log/mix_test_482691.log: => Passed
+log/read_write_register_test_839712.log: => Passed
+log/reserved_check_test_268539.log: => Passed
+-----------------------------------------------------------
